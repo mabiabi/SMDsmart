@@ -33,7 +33,9 @@ SQL Server  ── dw schema (star schema, 8 dims + 7 facts) ──▶  Power BI
 
 Full Python ETL structure: [`py_structure.drawio`](./etl/py_structure.drawio) (open in [diagrams.net](https://app.diagrams.net)).
 
-![`py_structure.png`](./etl/py_structure.png)
+<p align="center">
+  <img src="./etl/py_structure.png" alt="Architecture" width="400">
+</p>
 
 Full entity-relationship diagram: [`smdsmart_dwh_erd.drawio`](./warehouse/smdsmart_dwh_erd.drawio)
 (open in [diagrams.net](https://app.diagrams.net)).
