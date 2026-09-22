@@ -29,16 +29,16 @@ SQL Server  ── dw schema (star schema, 8 dims + 7 facts) ──▶  Power BI
             └─ ods schema (raw placement drill-through)  ──▶  Power BI (DirectQuery)
 ```
 
-[`Architecture.png`](./Architecture.png)
+![`Architecture.png`](./Architecture.png)
 
 Full Python ETL structure: [`py_structure.drawio`](./etl/py_structure.drawio) (open in [diagrams.net](https://app.diagrams.net)).
 
-[`py_structure.png`](./etl/py_structure.png)
+![`py_structure.png`](./etl/py_structure.png)
 
 Full entity-relationship diagram: [`smdsmart_dwh_erd.drawio`](./warehouse/smdsmart_dwh_erd.drawio)
 (open in [diagrams.net](https://app.diagrams.net)).
 
-[`SSMS_ERD.png`](./warehouse/SSMS_ERD.png)
+![`SSMS_ERD.png`](./warehouse/SSMS_ERD.png)
 
 ## What's in this repo
 
