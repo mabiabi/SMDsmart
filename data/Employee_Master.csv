@@ -1,0 +1,26 @@
+﻿EmployeeID,Full Name,Role,Home Line,Shift,Hire Date (Jalali)
+EMP-001,احسان امینی,Production Operator,LINE-A,Shift 1,1399/11/21
+EMP-002,لیلا عزیزی,Production Operator,LINE-A,Shift 2,1396/10/19
+EMP-003,سارا صادقی,Production Operator,LINE-A,Shift 1,1402/01/08
+EMP-004,بابک اکبری,Production Operator,LINE-A,Shift 2,1396/09/28
+EMP-005,الهام زارعی,Production Operator,LINE-A,Shift 1,1398/05/14
+EMP-006,یاسمن رستمی,Production Operator,LINE-B,Shift 1,1398/09/04
+EMP-007,نگار قاسمی,Production Operator,LINE-B,Shift 2,1400/09/27
+EMP-008,داوود حیدری,Production Operator,LINE-B,Shift 1,1398/02/19
+EMP-009,بهنام رحیمی,Production Operator,LINE-B,Shift 2,1399/06/04
+EMP-010,زهرا نوری,Production Operator,LINE-B,Shift 1,1404/12/03
+EMP-011,سینا نجفی,Line Supervisor,LINE-A,Shift 2,1396/10/07
+EMP-012,علی احمدی,Line Supervisor,LINE-B,Shift 2,1403/11/18
+EMP-013,حامد صالحی,Quality Inspector,,,1402/06/15
+EMP-014,امیر یوسفی,Quality Inspector,,,1403/06/10
+EMP-015,نیما طاهری,Maintenance Technician,,Shift 1,1399/03/23
+EMP-016,شیوا بهرامی,Warehouse Staff,,,1399/02/19
+EMP-017,پریسا جعفری,Warehouse Staff,,,1400/09/16
+EMP-018,رضا کریمی,Order Intake / Sales,,,1401/12/15
+EMP-019,فرزاد قربانی,Order Intake / Sales,,,1400/10/03
+EMP-020,حسین رضایی,Finance / Accounting,,,1397/09/14
+EMP-021,محمد محمدی,Finance / Accounting,,,1398/06/05
+EMP-022,کامران فرهادی,Procurement,,,1403/07/02
+EMP-023,مریم شریفی,Procurement,,,1397/09/19
+EMP-024,مهدی حسینی,Management,,,1401/06/23
+EMP-025,کیانا موسوی,Management,,,1401/10/16

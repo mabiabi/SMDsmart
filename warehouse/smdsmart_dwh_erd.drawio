@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="SMDsmart DWH ERD" id="smdsmart-erd">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DimDate" value="&lt;b&gt;dw.DimDate&lt;/b&gt;&lt;br&gt;PK DateKey : int&lt;br&gt;&#160;&#160;&#160;GregorianDate : date&lt;br&gt;&#160;&#160;&#160;JalaliYear : smallint&lt;br&gt;&#160;&#160;&#160;JalaliMonth : tinyint&lt;br&gt;&#160;&#160;&#160;JalaliDay : tinyint&lt;br&gt;&#160;&#160;&#160;JalaliDateText : char(10)&lt;br&gt;&#160;&#160;&#160;JalaliMonthName : nvarchar(20)&lt;br&gt;&#160;&#160;&#160;JalaliYearMonth : char(7)&lt;br&gt;&#160;&#160;&#160;JalaliQuarter : tinyint&lt;br&gt;&#160;&#160;&#160;DayOfWeekName : nvarchar(20)&lt;br&gt;&#160;&#160;&#160;IsWeekend : bit&lt;br&gt;&#160;&#160;&#160;IsWorkingDay : bit" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="DimCustomer" value="&lt;b&gt;dw.DimCustomer&lt;/b&gt;&lt;br&gt;PK CustomerSK : int&lt;br&gt;UK CustomerID : varchar(10)&lt;br&gt;&#160;&#160;&#160;CustomerName : nvarchar(200)&lt;br&gt;&#160;&#160;&#160;CustomerType : varchar(20)&lt;br&gt;&#160;&#160;&#160;Address : nvarchar(300)&lt;br&gt;&#160;&#160;&#160;PhoneNumber : varchar(20)&lt;br&gt;&#160;&#160;&#160;NationalID : varchar(15)&lt;br&gt;&#160;&#160;&#160;Email : varchar(100)&lt;br&gt;&#160;&#160;&#160;PostalCode : varchar(15)&lt;br&gt;&#160;&#160;&#160;EconomicCode : varchar(15)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="260" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="DimEmployee" value="&lt;b&gt;dw.DimEmployee&lt;/b&gt;&lt;br&gt;PK EmployeeSK : int&lt;br&gt;UK EmployeeID : varchar(10)&lt;br&gt;&#160;&#160;&#160;FullName : nvarchar(100)&lt;br&gt;&#160;&#160;&#160;Role : nvarchar(50)&lt;br&gt;&#160;&#160;&#160;HomeLine : varchar(10)&lt;br&gt;&#160;&#160;&#160;Shift : varchar(10)&lt;br&gt;&#160;&#160;&#160;HireDate : date" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DimLine" value="&lt;b&gt;dw.DimLine&lt;/b&gt;&lt;br&gt;PK LineSK : int&lt;br&gt;UK LineID : varchar(10)&lt;br&gt;&#160;&#160;&#160;MachineModel : nvarchar(50)&lt;br&gt;&#160;&#160;&#160;OvenModel : nvarchar(50)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="880" y="40" width="260" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="DimOrderAttributes" value="&lt;b&gt;dw.DimOrderAttributes&lt;/b&gt;&lt;br&gt;PK OrderAttributesSK : int&lt;br&gt;&#160;&#160;&#160;FactorType : varchar(15)&lt;br&gt;&#160;&#160;&#160;StencilBy : varchar(10)&lt;br&gt;&#160;&#160;&#160;HasBGA : bit&lt;br&gt;&#160;&#160;&#160;Has0402 : bit&lt;br&gt;&#160;&#160;&#160;Has0201 : bit&lt;br&gt;&#160;&#160;&#160;ComponentSourcing : varchar(20)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="332" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DimVendor" value="&lt;b&gt;dw.DimVendor&lt;/b&gt;&lt;br&gt;PK VendorSK : int&lt;br&gt;&#160;&#160;&#160;VendorName : nvarchar(200)&lt;br&gt;&#160;&#160;&#160;VendorCategory : varchar(30)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="332" width="260" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="DimComponent" value="&lt;b&gt;dw.DimComponent&lt;/b&gt;&lt;br&gt;PK ComponentSK : int&lt;br&gt;UK PartNumber : varchar(50)&lt;br&gt;&#160;&#160;&#160;ComponentType : varchar(30)&lt;br&gt;&#160;&#160;&#160;Package : varchar(20)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="332" width="260" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="DimErrorCategory" value="&lt;b&gt;dw.DimErrorCategory&lt;/b&gt;&lt;br&gt;PK ErrorCategorySK : int&lt;br&gt;UK ErrorCategory : nvarchar(50)&lt;br&gt;&#160;&#160;&#160;ErrorGroup : varchar(30)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="880" y="332" width="260" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="FactOrder" value="&lt;b&gt;dw.FactOrder&lt;/b&gt;&lt;br&gt;PK OrderSK : int&lt;br&gt;UK OrderID : varchar(20)&lt;br&gt;FK CustomerSK : int&lt;br&gt;FK LineSK : int&lt;br&gt;FK OrderAttributesSK : int&lt;br&gt;FK RegisteredDateKey : int&lt;br&gt;FK JobStartDateKey : int&lt;br&gt;FK JobEndDateKey : int&lt;br&gt;FK AnnouncedDeliveryDateKey : int&lt;br&gt;FK DeliveredDateKey : int&lt;br&gt;FK InvoiceDateKey : int&lt;br&gt;&#160;&#160;&#160;BoardName : nvarchar(100)&lt;br&gt;&#160;&#160;&#160;BoardQty : int&lt;br&gt;&#160;&#160;&#160;PadSMDTopQty : int&lt;br&gt;&#160;&#160;&#160;PadSMDBottomQty : int&lt;br&gt;&#160;&#160;&#160;PadTHDTopQty : int&lt;br&gt;&#160;&#160;&#160;PadTHDBottomQty : int&lt;br&gt;&#160;&#160;&#160;DistinctComponentCount : int&lt;br&gt;&#160;&#160;&#160;ProducedGoodQty : int&lt;br&gt;&#160;&#160;&#160;ProducedRejectQty : int&lt;br&gt;&#160;&#160;&#160;TotalStoppageMinutes : int&lt;br&gt;&#160;&#160;&#160;LeadTimeDays : int&lt;br&gt;&#160;&#160;&#160;IsOnTime : bit&lt;br&gt;&#160;&#160;&#160;SMDMontageTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;THDMontageTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;BoardMontageTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;StencilTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;PackagingTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;NonReelCountingTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;LineStoppingTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;ComponentCostTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;InvoiceSubtotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;VATAmount : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;InvoiceGrandTotal : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;AmountPaid : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;PaymentStatus : varchar(10)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="534" width="260" height="692" as="geometry" />
+        </mxCell>
+        <mxCell id="FactError" value="&lt;b&gt;dw.FactError&lt;/b&gt;&lt;br&gt;PK ErrorSK : bigint&lt;br&gt;UK ErrorLogID : varchar(20)&lt;br&gt;FK DateKey : int&lt;br&gt;&#160;&#160;&#160;ErrorTime : time(0)&lt;br&gt;FK LineSK : int&lt;br&gt;FK OrderSK : int&lt;br&gt;FK ErrorCategorySK : int&lt;br&gt;FK ResolvedByEmployeeSK : int&lt;br&gt;&#160;&#160;&#160;DurationMinutes : int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1240" width="260" height="206" as="geometry" />
+        </mxCell>
+        <mxCell id="FactFeederEvent" value="&lt;b&gt;dw.FactFeederEvent&lt;/b&gt;&lt;br&gt;PK FeederEventSK : bigint&lt;br&gt;UK FeederLogID : varchar(20)&lt;br&gt;FK DateKey : int&lt;br&gt;FK LineSK : int&lt;br&gt;FK OrderSK : int&lt;br&gt;FK ComponentSK : int&lt;br&gt;FK LoadedByEmployeeSK : int&lt;br&gt;&#160;&#160;&#160;FeederSlotNo : int&lt;br&gt;&#160;&#160;&#160;ComponentsLoadedQty : int&lt;br&gt;&#160;&#160;&#160;ComponentsConsumedQty : int&lt;br&gt;&#160;&#160;&#160;ComponentsRemainingQty : int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1240" width="260" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="FactPurchase" value="&lt;b&gt;dw.FactPurchase&lt;/b&gt;&lt;br&gt;PK PurchaseSK : int&lt;br&gt;UK PurchaseID : varchar(20)&lt;br&gt;FK DateKey : int&lt;br&gt;FK VendorSK : int&lt;br&gt;FK OrderSK : int&lt;br&gt;&#160;&#160;&#160;Category : varchar(30)&lt;br&gt;&#160;&#160;&#160;Quantity : int&lt;br&gt;&#160;&#160;&#160;UnitPrice : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;TotalAmount : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;PaymentStatus : varchar(10)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1240" width="260" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="FactPayroll" value="&lt;b&gt;dw.FactPayroll&lt;/b&gt;&lt;br&gt;PK PayrollSK : int&lt;br&gt;UK PayrollID : varchar(20)&lt;br&gt;FK EmployeeSK : int&lt;br&gt;&#160;&#160;&#160;PayPeriodJalali : char(7)&lt;br&gt;FK PaymentDateKey : int&lt;br&gt;&#160;&#160;&#160;BaseSalary : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;OvertimeHours : decimal(6,1)&lt;br&gt;&#160;&#160;&#160;OvertimePay : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;Bonus : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;GrossPay : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;Deductions : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;NetPay : decimal(18,0)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1240" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="FactAttendance" value="&lt;b&gt;dw.FactAttendance&lt;/b&gt;&lt;br&gt;PK AttendanceSK : bigint&lt;br&gt;UK AttendanceID : varchar(20)&lt;br&gt;FK EmployeeSK : int&lt;br&gt;FK DateKey : int&lt;br&gt;&#160;&#160;&#160;HoursWorked : decimal(5,2)&lt;br&gt;&#160;&#160;&#160;Status : varchar(10)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1532" width="260" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="FactTransaction" value="&lt;b&gt;dw.FactTransaction&lt;/b&gt;&lt;br&gt;PK TransactionSK : bigint&lt;br&gt;UK TransactionID : varchar(20)&lt;br&gt;FK DateKey : int&lt;br&gt;&#160;&#160;&#160;TransactionType : varchar(30)&lt;br&gt;&#160;&#160;&#160;RelatedReferenceID : varchar(20)&lt;br&gt;&#160;&#160;&#160;Amount : decimal(18,0)&lt;br&gt;&#160;&#160;&#160;Direction : varchar(10)&lt;br&gt;&#160;&#160;&#160;PaymentMethod : varchar(20)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1532" width="260" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="PlacementDetail" value="&lt;b&gt;ods.PlacementDetail&lt;/b&gt;&lt;br&gt;PK PlacementLogID : varchar(20)&lt;br&gt;&#160;&#160;&#160;OrderID : varchar(20)&lt;br&gt;&#160;&#160;&#160;LineID : varchar(10)&lt;br&gt;&#160;&#160;&#160;BoardSerialNo : varchar(30)&lt;br&gt;&#160;&#160;&#160;ReferenceDesignator : varchar(10)&lt;br&gt;&#160;&#160;&#160;ComponentPartNumber : varchar(50)&lt;br&gt;&#160;&#160;&#160;FeederSlotNo : int&lt;br&gt;&#160;&#160;&#160;PlacementX_mm : decimal(6,2)&lt;br&gt;&#160;&#160;&#160;PlacementY_mm : decimal(6,2)&lt;br&gt;&#160;&#160;&#160;HeadNo : tinyint&lt;br&gt;&#160;&#160;&#160;PlacementTimestamp : datetime2(0)&lt;br&gt;&#160;&#160;&#160;Result : varchar(5)&lt;br&gt;&#160;&#160;&#160;NGReason : varchar(50)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1752" width="260" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" value="6 milestone dates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactOrder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="occurred on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactError">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="loaded on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactFeederEvent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="purchased on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactPurchase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="paid on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactPayroll">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="attended on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactAttendance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="transacted on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimDate" target="FactTransaction">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="places" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimCustomer" target="FactOrder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" value="runs on" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimLine" target="FactOrder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" value="classifies" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimOrderAttributes" target="FactOrder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimLine" target="FactError">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimLine" target="FactFeederEvent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" value="categorizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimErrorCategory" target="FactError">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="resolved by (nullable)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimEmployee" target="FactError">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="loaded by (nullable)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimEmployee" target="FactFeederEvent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" value="paid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimEmployee" target="FactPayroll">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" value="logs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimEmployee" target="FactAttendance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" value="loaded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimComponent" target="FactFeederEvent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="supplies" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="DimVendor" target="FactPurchase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" value="during (nullable)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="FactOrder" target="FactError">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" value="during (nullable)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="FactOrder" target="FactFeederEvent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" value="for (nullable)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="FactOrder" target="FactPurchase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" value="drill-through, not FK-enforced" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;endArrow=block;endFill=0;strokeColor=#666666;" edge="1" parent="1" source="FactOrder" target="PlacementDetail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

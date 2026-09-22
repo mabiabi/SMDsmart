@@ -1,0 +1,18 @@
+2026-09-05 16:58:04,766 [INFO] ======================================================================
+2026-09-05 16:58:04,766 [INFO] SMDsmart ETL run starting
+2026-09-05 16:58:05,639 [INFO] dw.DimDate already populated (7305 rows) - skipping
+2026-09-05 16:58:05,735 [INFO] dw.DimEmployee: updated 14 changed rows (SCD1)
+2026-09-05 16:58:05,827 [INFO] dw.FactOrder: nothing new to insert
+2026-09-05 16:58:07,264 [INFO] dw.FactError: nothing new to insert
+2026-09-05 16:58:07,350 [INFO] dw.FactFeederEvent: nothing new to insert
+2026-09-05 16:58:29,941 [INFO] ods.PlacementDetail: inserted 248913 new rows (0 already present, skipped)
+2026-09-05 16:58:35,678 [INFO] ods.PlacementDetail: purged rows older than 90 days (248913 rows deleted)
+2026-09-05 16:58:35,875 [INFO] dw.FactPurchase: nothing new to insert
+2026-09-05 16:58:36,271 [INFO] dw.FactOrder: updated invoice fields for 370 orders
+2026-09-05 16:58:36,867 [INFO] dw.FactPayroll: nothing new to insert
+2026-09-05 16:58:36,910 [INFO] dw.FactAttendance: nothing new to insert
+2026-09-05 16:58:36,924 [INFO] dw.FactTransaction: nothing new to insert
+2026-09-05 16:58:36,925 [INFO] ----------------------------------------------------------------------
+2026-09-05 16:58:36,925 [INFO] ETL run finished in 32.2s
+2026-09-05 16:58:36,925 [INFO] Succeeded: ['Core order pipeline (0 new orders)', 'Production detail (Error/Feeder/Placement)', 'Finance (Purchase/Invoice)', 'HR & Transactions (Payroll/Attendance/Transaction)']
+2026-09-05 16:58:36,925 [INFO] ======================================================================

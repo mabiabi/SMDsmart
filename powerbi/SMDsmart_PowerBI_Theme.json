@@ -1,0 +1,65 @@
+{
+  "name": "SMDsmart DWH Theme",
+  "dataColors": [
+    "#1D9E75",
+    "#378ADD",
+    "#7F77DD",
+    "#D85A30",
+    "#D4537E",
+    "#BA7517",
+    "#639922",
+    "#5F5E5A"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#2C2C2A",
+  "tableAccent": "#1D9E75",
+  "good": "#639922",
+  "neutral": "#BA7517",
+  "bad": "#E24B4A",
+  "maximum": "#0C447C",
+  "center": "#FAEEDA",
+  "minimum": "#E6F1FB",
+  "null": "#B4B2A9",
+  "textClasses": {
+    "callout": { "fontSize": 32, "fontFace": "Segoe UI Semibold", "color": "#2C2C2A" },
+    "title": { "fontSize": 14, "fontFace": "Segoe UI Semibold", "color": "#2C2C2A" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#2C2C2A" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#5F5E5A" }
+  },
+  "visualStyles": {
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": { "solid": { "color": "#2C2C2A" } },
+            "fontSize": 24
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": { "solid": { "color": "#5F5E5A" } },
+            "fontSize": 12
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#E1E0D9" } },
+            "radius": 0
+          }
+        ]
+      }
+    }
+  }
+}
